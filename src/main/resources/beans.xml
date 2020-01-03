@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="student_1_Bean" class="assignment1.Student">
+		<property name="stdName" value="Toto"></property>
+		<property name="stdId" value="6151000"></property> 
+
+	</bean>
+	
+	<bean id="student_2_Bean" class="assignment1.Student">
+		<property name="stdName" value="Popo"></property>
+		<property name="stdId" value="6151777"></property> 
+
+	</bean>
+	
+	<bean id="student_3_Bean" class="assignment1.Student">
+		<property name="stdName" value="Jojo"></property>
+		<property name="stdId" value="615199999"></property> 
+
+	</bean>
+
+	<bean id="teacherBean" class="assignment1.Teacher">
+		<property name="teacherName" value="Reza"></property>
+		<property name="students">
+		<list>
+		<ref bean="student_1_Bean" />
+		<ref bean="student_2_Bean" />
+		<ref bean="student_3_Bean" />
+		</list> 
+		</property>
+	</bean>
+
+
+</beans>
